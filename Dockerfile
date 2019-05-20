@@ -3,4 +3,5 @@ MAINTAINER a 'freeai'
 COPY app.py /www/
 COPY index.html /www/
 COPY node_modules\ /www/node_modules
-ENTRYPOINT ["python3","/www/app.py"]
+RUN pip3 install terminado
+ENTRYPOINT ["python3","app.py"]
